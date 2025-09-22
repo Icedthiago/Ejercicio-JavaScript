@@ -3,7 +3,7 @@
       let capital = Number(document.getElementById("capital").value);
       let ganancia = capital * 0.02;
       let total = capital + ganancia;
-      document.getElementById("res1").innerText = "Ganancia: " + ganancia + " | Total: " + total;
+      document.getElementById("res1").innerText = "Ganancia: " + ganancia + " --- Total: " + total;
     }
 
     // 2
@@ -14,7 +14,7 @@
       let v3 = Number(document.getElementById("v3").value);
       let comision = (v1 + v2 + v3) * 0.10;
       let total = sueldo + comision;
-      document.getElementById("res2").innerText = "Comisión: " + comision + " | Total: " + total;
+      document.getElementById("res2").innerText = "Comisión: " + comision + " --- Total: " + total;
     }
 
     // 3
@@ -43,7 +43,7 @@
       let nac = Number(document.getElementById("nac").value);
       let actual = Number(document.getElementById("actual").value);
       let edad = actual - nac;
-      document.getElementById("res5").innerText = "Edad: " + edad + " años";
+      document.getElementById("res5").innerText = "Edad: " + edad + " años vivos :v";
     }
 
     // 6
@@ -189,7 +189,7 @@
     const vAcepto = validarAcepto();
 
     if (vNombre && vEmail && vPassword && vComentarios && vAcepto) {
-        res9.innerText = "Formulario válido. (Simulación: envío exitoso)";
+        res9.innerText = "Formulario válido. (NO hay bases de datos para guardar)";
         // aquí podrías enviar con fetch() a una API real si tuvieras servidor
     } else {
         res9.innerText = "Formulario inválido. Revisa los errores mostrados.";
@@ -207,4 +207,5 @@
         const entrada = document.getElementById("htmlInput").value;
         const limpio = removeScriptTags(entrada);
     document.getElementById("res10").innerText = limpio;
+
     });
