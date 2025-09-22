@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+      <section class="section">
+    <h2> Formulario con validación</h2>
+    <form id="registro" novalidate>
+      <label class="label" for="nombre">Nombre (obligatorio)</label>
+      <input id="nombre" type="text" />
+      <div id="err-nombre" class="error"></div>
+
+      <label class="label" for="email">Email (obligatorio)</label>
+      <input id="email" type="email" />
+      <div id="err-email" class="error"></div>
+
+      <label class="label" for="password">Password (mín. 6 caracteres, al menos minúscula, mayúscula y dígito)</label>
+      <input id="password" type="password" />
+      <div id="err-password" class="error"></div>
+
+      <label class="label" for="comentarios">Comentarios (obligatorio, máximo 50 caracteres)</label>
+      <textarea id="comentarios" rows="3"></textarea>
+      <div id="err-comentarios" class="error"></div>
+
+      <label class="label">
+        <input id="acepto" type="checkbox" />
+        Acepto las condiciones del servicio (obligatorio)
+      </label>
+      <div id="err-acepto" class="error"></div>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="res9" class="resultado"></p>
+  </section>
+    
+    <script src="back.js"></script>
+</body>
+</html>
