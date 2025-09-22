@@ -43,7 +43,7 @@
       let nac = Number(document.getElementById("nac").value);
       let actual = Number(document.getElementById("actual").value);
       let edad = actual - nac;
-      document.getElementById("res5").innerText = "Edad: " + edad + " años vivos :v";
+      document.getElementById("res5").innerText = "Edad: " + edad + " años";
     }
 
     // 6
@@ -98,7 +98,7 @@
     const form = document.getElementById("registro");
     const res9 = document.getElementById("res9");
 
-    // spans de error
+    // errores
     const errNombre = document.getElementById("err-nombre");
     const errEmail = document.getElementById("err-email");
     const errPassword = document.getElementById("err-password");
@@ -109,7 +109,7 @@
     const emailPat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/; // min 6, 1 lower, 1 upper, 1 digit
 
-    // funciones de validación por campo (devuelven true/false)
+    // funciones de validación por campo
     function validarNombre() {
     const val = nombre.value.trim();
     if (val === "") {
@@ -189,7 +189,7 @@
     const vAcepto = validarAcepto();
 
     if (vNombre && vEmail && vPassword && vComentarios && vAcepto) {
-        res9.innerText = "Formulario válido. (NO hay bases de datos para guardar)";
+        res9.innerText = "Formulario válido.";
         // aquí podrías enviar con fetch() a una API real si tuvieras servidor
     } else {
         res9.innerText = "Formulario inválido. Revisa los errores mostrados.";
@@ -207,5 +207,4 @@
         const entrada = document.getElementById("htmlInput").value;
         const limpio = removeScriptTags(entrada);
     document.getElementById("res10").innerText = limpio;
-
     });
